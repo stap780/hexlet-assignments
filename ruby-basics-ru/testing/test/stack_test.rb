@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require "minitest/autorun"
+require 'minitest/autorun'
 
-require_relative "test_helper"
-require_relative "../lib/stack"
+require_relative 'test_helper'
+require_relative '../lib/stack'
 
 class StackTest < Minitest::Test
   # BEGIN
@@ -11,11 +11,10 @@ class StackTest < Minitest::Test
     @stack = Stack.new
   end
 
-  def teardown
-  end
+  def teardown; end
 
   def test_add_element
-    assert_equal(@stack.push!("ruby"), ["ruby"])
+    assert_equal(@stack.push!('ruby'), ['ruby'])
   end
 
   def test_remove_element
@@ -33,5 +32,5 @@ class StackTest < Minitest::Test
   # END
 end
 
-test_methods = StackTest.new({}).methods.select { |method| method.start_with? "test_" }
-raise "StackTest has not tests!" if test_methods.empty?
+test_methods = StackTest.new({}).methods.select { |method| method.start_with? 'test_' }
+raise 'StackTest has not tests!' if test_methods.empty?
