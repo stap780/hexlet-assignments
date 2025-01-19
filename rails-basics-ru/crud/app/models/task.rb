@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 class Task < ApplicationRecord
-  STATUSES = %i[new in_progress completed].freeze
-  USERS = %w[Petrov Sidorov Ivanov].freeze
+  STATUSES = %i[new finished].freeze
   validates :name, presence: true
   validates :status, presence: true
   validates :creator, presence: true
-  validates :completed, presence: true
+  validates :completed, inclusion: [true, false]
+  
 end

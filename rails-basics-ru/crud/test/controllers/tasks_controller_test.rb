@@ -7,10 +7,10 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
     @task = tasks(:one)
     @attrs = {
       name: Faker::Artist.name,
-      description: Faker::Movies::Hobbit.quote,
-      status: :new,
-      creator: Faker::Movies::Hobbit.character,
-      performer: Faker::Movies::Hobbit.character,
+      description: Faker::Movies::HarryPotter.quote,
+      status: Faker::Movies::HarryPotter.spell,
+      creator: Faker::Movies::HarryPotter.character,
+      performer: Faker::Movies::HarryPotter.character,
       completed: Faker::Boolean.boolean
     }
   end
@@ -43,7 +43,7 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should update task' do
-    patch task_url(@task), params: { task: { name: @task.name, status: @task.status, creator: @task.creator, completed: @task.completed } }
+    put task_url(@task), params: { task: { creator: @task.creator, status: @task.status, name: @task.name, completed: false } }
     assert_redirected_to task_url(@task)
   end
 

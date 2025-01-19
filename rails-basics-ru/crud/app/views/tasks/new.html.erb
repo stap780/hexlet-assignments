@@ -1,1 +1,30 @@
-  <%= render "form", task: @task, title: 'New task' %>
+<h1>Create task</h1>
+
+<%= form_with model: @task, url: tasks_path do |form| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2>Ошибка при создании задачи:</h2>
+      <ul>
+        <% @task.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Create" %>
+  </div>
+<% end %>
+
+<p><%= link_to "back", tasks_path %></p>
