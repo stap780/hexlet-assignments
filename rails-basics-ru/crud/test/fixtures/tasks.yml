@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Test task name one
+  description: Test task description one
+  status: :in_progress
+  creator: Ivanov
+  performer: Ivanov
+  completed: false
+
+two:
+  name: Test task name two
+  description: Test task description two
+  status: :in_progress
+  creator: Petrov
+  performer: Ivanov
+  completed: false
