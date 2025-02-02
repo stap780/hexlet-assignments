@@ -1,0 +1,4 @@
+.my-4 = simple_form_for @comment, url: post_comments_path(post, @comment) do |f|
+  = f.input :body, label: false, placeholder: 'Live your comments here...'
+
+  = f.button :submit, class: 'btn btn-success mt-2 btn-block'

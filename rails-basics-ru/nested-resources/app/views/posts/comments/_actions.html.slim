@@ -1,0 +1,4 @@
+.d-flex
+  = link_to 'Edit', edit_post_comment_path(post, comment), class: 'btn btn-outline-primary me-2'
+  = link_to 'Delete', post_comment_path(post, comment), data: { turbo_confirm: 'Are you sure?', turbo_method: :delete }, class: 'btn btn-outline-danger'
+hr
