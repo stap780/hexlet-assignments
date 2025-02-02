@@ -1,0 +1,10 @@
+ru:
+  layouts:
+    application:
+      page_title: Заголовок
+      hexlet_title: © Хекслет, 2022
+    shared:
+      nav:
+        home: Домой
+        posts: Посты
+        hexlet_logo: Логотип

@@ -1,0 +1,10 @@
+en:
+  show: Show
+  edit: Edit
+  destroy: Delete
+  destroy_confirmation: Are you sure?
+  back: Back
+
+  home:
+    index:
+      title: Home page

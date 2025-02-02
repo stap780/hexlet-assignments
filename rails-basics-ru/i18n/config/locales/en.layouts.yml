@@ -1,0 +1,10 @@
+en:
+  layouts:
+    application:
+      page_title: Title
+      hexlet_title: © Hexlet, 2022
+    shared:
+      nav:
+        home: Home
+        posts: Posts
+        hexlet_logo: Logo

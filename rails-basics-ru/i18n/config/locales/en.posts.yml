@@ -1,0 +1,43 @@
+en:
+  posts:
+    # BEGIN
+    new:
+      title: New Post
+    edit:
+      title: Edit Post
+    update:
+      success: Post was updated.
+    destroy:
+      success: Post was destroyed.
+    create:
+      success: Post was created.
+
+    index:
+      title: Posts
+      actions:
+        show: show
+        edit: edit
+        destroy: destroy
+        new: New Post
+      comments:
+        zero: No comments
+        one: "%{count} comment"
+        few: "%{count} comments"
+        many: "%{count} comments"
+        other: "%{count} comments"
+      table:
+        title: Title
+    show:
+      body: Body
+      comments: Comments
+    # END
+
+    comments:
+      edit:
+        title: Editing comment
+
+      create:
+        success: Comment was created.
+
+      update:
+        success: Comment was updated.

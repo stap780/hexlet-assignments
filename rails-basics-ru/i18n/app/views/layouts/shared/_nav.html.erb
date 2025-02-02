@@ -1,0 +1,31 @@
+<div class="container mb-2">
+  <div class="py-2 border-bottom">
+    <nav class="navbar navbar-expand-md navbar-light">
+      <%= link_to root_path, class: 'navbar-brand me-md-4' do %>
+        <%= image_tag asset_path('logo.png'), width: 30, alt: t('.hexlet_logo') %>
+      <% end %>
+
+      <div id="navbarToggler" class="collapse navbar-collapse">
+        <ul class="nav nav-pills flex-grow-1 navbar-nav">
+          <li class="nav-item me-2">
+            <%= link_to root_path, class: 'nav-link link-dark' do %>
+              <%= t('.home') %>
+            <% end %>
+          </li>
+          <li class="nav-item me-2">
+            <%= link_to posts_path, class: 'nav-link link-dark' do %>
+              <%= t('.posts') %>
+            <% end %>
+          </li>
+          <li class="nav-item d-flex align-items-center ms-auto">
+            <% I18n.available_locales.without(I18n.locale).each do |locale| %>
+              <%= link_to url_for(locale: locale) do %>
+                <%= image_tag asset_path("flag-#{locale}.svg"), width: 25, alt: "switch language to #{locale}" %>
+              <% end %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
